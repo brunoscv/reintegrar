@@ -1,0 +1,106 @@
+/* Quadro do formulario do login */
+.login-box {
+    margin: auto;
+    max-width: 25em;
+    padding: 8% 0 0 0;
+    background: #f5f5f5;
+}
+.login-box .logo-name {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #6c6c6c;
+}
+
+.login-box .user-box {
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+.login-box .user-box img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.login-box .user-box form {
+    overflow: hidden;
+}
+
+.form-box {
+    padding: 2em;
+    background: #fff;
+}
+
+/* Quadro do formulario do login */
+.center {
+    margin: 0 auto;
+    float: none!important;
+    display: block;
+}
+.left {
+    margin: 10em 0;
+    display: block;
+}
+/* .btn {
+    font-size: 13px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    outline: none!important;
+} */
+/* .form-control {
+    background: #fff;
+    border-radius: 0;
+    border: 1px solid #dce1e4;
+    box-shadow: none!important;
+    font-size: 13px;
+    padding: 6px 10px!important;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+} */
+/* .input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 0;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid transparent;
+    border-radius: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 2px 1px rgba(0,0,0,.05);
+} */
+.logomarca {
+    width: 21em;
+}
+.btn-margin-top {
+    margin-top: 1em
+}
+.login {
+    background: #f5f5f5;
+}
+.infos-unidade {
+    margin: 9.3em 0;
+    display: block;
+}
+.infos-titulo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.infos-destaques {
+    color: #fff;
+    font-size: 20px;
+    line-height: 2em;
+    font-weight: bolder;
+}

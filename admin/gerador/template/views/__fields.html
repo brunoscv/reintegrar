@@ -1,0 +1,63 @@
+<tal:fields metal:define-macro="Fields">
+                <ol><?php foreach( $campos as $campo ):?><?php if($campo['tipo'] != 'hidden'): ?><li<?php echo ($campo['busca_tipo'] == 'master') ? ' class="lupa"' : ''; ?>>
+                            <label for="<?php echo $campo['name']?>"><strong><?php echo htmlentities($campo['field']); ?></strong><?php if( preg_match('/required/',$campo['validacao']) ): ?>(Obrigat&oacute;rio)<?php endif ?></label>
+                        <?php
+                            echo "\t";
+                            switch( $campo['tipo'] ){
+                                case 'password':
+                                    echo $campo['tipo']($campo['name'],'','id="'.$campo['name'].'" class="text medium" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : set_value(\''.$campo['name'].'\');"');
+                                break;
+                                case 'checkbox':
+                                    echo $campo['tipo']($campo['name'],'1','id="'.$campo['name'].'" tal:attributes="checked php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : set_value(\''.$campo['name'].'\');"');
+                                break;
+                                case 'text_large':
+                                    echo text($campo['name'],'','id="'.$campo['name'].'" class="text large" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : set_value(\''.$campo['name'].'\');"');
+                                break;
+                                case 'text_medium':
+                                    echo text($campo['name'],'','id="'.$campo['name'].'" class="text medium" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : set_value(\''.$campo['name'].'\');"');
+                                break;
+                                case 'text_small':
+                                    echo text($campo['name'],'','id="'.$campo['name'].'" class="text small" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : set_value(\''.$campo['name'].'\');"');
+                                break;
+                                case 'phone':
+                                    echo text($campo['name'],'','id="'.$campo['name'].'" class="text small fone" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : set_value(\''.$campo['name'].'\');"');
+                                break;
+                                case 'cep':
+                                    echo text($campo['name'],'','id="'.$campo['name'].'" class="text small cep" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : set_value(\''.$campo['name'].'\');"');
+                                break;
+                                case 'date':
+                                    echo text($campo['name'],'','id="'.$campo['name'].'" class="text small datepicker" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : set_value(\''.$campo['name'].'\');"');
+                                break;
+                                case 'cpf':
+                                    echo text($campo['name'],'','id="'.$campo['name'].'" class="text medium cpf" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : set_value(\''.$campo['name'].'\');"');
+                                break;
+                                case 'cnpj':
+                                    echo text($campo['name'],'','id="'.$campo['name'].'" class="text medium cnpj" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : set_value(\''.$campo['name'].'\');"');
+                                break;
+                                case 'estado':
+                                    echo '<select name="estado_id" onchange="$(\'#cidade_id\').load(\'<?php echo site_url(\'/ajax/getCidades/\') ?>/\'+this.value);return false;" tal:content="structure php: isset('.$modulo.') ? makeOptions(listaEstado,set_value(\'estado_id\','.$modulo.'.estado_id)) : makeOptions(listaEstado,set_value(\'estado_id\'))"></select>';
+                                break;
+                                case 'cidade':
+                                    echo '<select name="cidade_id" id="cidade_id" tal:content="structure php: isset('.$modulo.') ? makeOptions(listaCidade,set_value(\'cidade_id\','.$modulo.'.cidade_id)) : makeOptions(listaCidade,set_value(\'cidades_id\'))"></select>';
+                                break;
+                                case 'select':
+                                    $nome = preg_replace("/_id$/",'',$campo['name']);
+                                    if( $campo['busca_tipo'] == 'select' ){
+                                        echo '<select name="'.$campo['name'].'" id="'.$campo['name'].'" tal:content="structure php: isset('.$modulo.') ? makeOptions(lista'.ucfirst($nome).',set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].')) : makeOptions(lista'.ucfirst($nome).',set_value(\''.$campo['name'].'\'))"></select>';
+                                    } elseif( $campo['busca_tipo'] == 'master' ) {
+                                        echo hidden($campo['name'],'','id="'.$campo['name'].'" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : \'\';"')."\n";
+                                        echo text($campo['name'].'_'.$campo['busca_campo'],'','id="'.$campo['name'].'_'.$campo['busca_campo'].'" readonly="readonly" class="text medium" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'_'.$campo['busca_campo'].'\','.$modulo.'.'.capitalize($nome).'.'.$campo['busca_campo'].') : set_value(\''.$campo['name'].'_'.$campo['busca_campo'].'\');"')."\n";
+                                        echo '<a tal:attributes="href php:site_url(\'/'.plural($nome).'/index\') . \'/?master=true\'" class="iframe fancybox">&nbsp;</a>';
+                                    }
+                                break;
+                                default:
+                                    echo "";
+                                break;
+                            }
+                            echo "\n"; 
+                        ?>
+                        </li>
+                        <?php else: ?>
+                            <?php echo "\n".tab(4).$campo['tipo']($campo['name'],'','id="'.$campo['name'].'" tal:attributes="value php: isset('.$modulo.') ? set_value(\''.$campo['name'].'\','.$modulo.'.'.$campo['name'].') : \'\';"')."\n"; ?>
+                        <?php endif; ?><?php endforeach; echo "\n".tab(3); ?></ol>
+</tal:fields>

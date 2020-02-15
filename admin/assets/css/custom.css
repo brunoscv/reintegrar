@@ -1,0 +1,126 @@
+/* Write your custom CSS here */
+em.error{font-size:.8em;color:#c00;}
+.panel-heading a.btn{margin-top:-8px;display: inline-block;}
+
+.panel.border-default {
+    border-bottom: 2px solid #ccc !important;
+}
+.panel.border-default .info-box-icon i{
+	color:#CCC !important;
+}
+.panel.border-primary {
+    border-bottom: 2px solid #7a6fbe !important;
+}
+.panel.border-primary .info-box-icon i{
+	color:#7a6fbe !important;
+}
+.panel.border-success {
+    border-bottom: 2px solid #22BAA0 !important;
+}
+.panel.border-success .info-box-icon i{
+	color:#22BAA0 !important;
+}
+.panel.border-info {
+    border-bottom: 2px solid #12AFCB !important;
+}
+.panel.border-info .info-box-icon i{
+	color:#12AFCB !important;
+}
+.panel.border-warning {
+    border-bottom: 2px solid #f6d433 !important;
+}
+.panel.border-warning .info-box-icon i{
+	color:#f6d433 !important;
+}
+.panel.border-danger {
+    border-bottom: 2px solid #f25656 !important;
+}
+.panel.border-danger .info-box-icon{
+	color:#f25656 !important;
+}
+
+.close-well{
+	position:absolute;top:2%;right:2%;
+}
+.close-well a{color:#ccc;padding:10px 5px;}
+.close-well a:hover{color:#333;}
+
+
+/** ## QUESTOES ## **/
+.bullet{display: inline-block;width: 10px; height: 10px; border-radius: 6px;}
+.actions{border-top:2px solid #eee;padding:10px;width:50%;margin: 0 auto;}
+table.relatorio{}
+table.relatorio th{font-size:11px;}
+table.relatorio th{min-width: 140px !important;}
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;		
+	border-bottom: 10px solid black;
+	margin: 0 auto;
+}
+.tipos{margin-bottom:10px;display: none;background: #f8f8f8;padding: 10px;border:1px solid #eee;}
+.tipos ul{
+	list-style: none;margin: 0;padding: 0;
+	width: 100%;
+	padding:10px;
+	background: #000; border-radius: 3px;
+}
+.tipos ul li{
+	margin:0;
+	padding: 0;
+	cursor: pointer;
+	color:#fff;
+	font-size:11px;
+	background-color: rgb(42, 42, 42);
+	background-image: url(../images/question-matrix-single.png);
+	background-origin: padding-box;
+	background-position: 50% 15px;
+	background-repeat: no-repeat;
+	background-size: auto;
+	box-shadow: rgba(102, 102, 102, 0.298039) 2px 2px 2px 0px inset;
+	display: inline-block;
+	padding-top:77px;
+	width: 33%;
+	height: 110px;
+	text-align: center;
+	vertical-align: top;
+}
+.tipos ul li.single{
+	background-image: url(../images/question-single.png) !important;
+}
+.tipos ul li.qtext{
+	background-image: url(../images/question-text.png);
+}
+.tipos ul li:hover{
+	background-color: rgb(82, 82, 82);
+}
+
+.categoria{border:1px dashed #ccc;margin-bottom: 10px;padding: 5px;}
+.question .option .delete{font-size:12px;border-radius: 14px;border:1px solid #ccc; color:#ccc;padding: 1px 4px;display: none;}
+.question .option:hover .delete{color:#ccc;border-color:#ccc;display: inline-block}
+.question .option .delete:hover{color:#c33;border-color:#c33;}
+
+.editable{padding:6px 10px;border:1px dashed #ccc;width:100%;display: inline-block;cursor: text;  word-wrap: break-word;}
+h3.editable{font-size:16px; font-weight: bold;border:1px dashed #ccc !important;}
+.heading .editable-container,.heading .control-group, .heading .editable-input{width:100%;}
+.heading .editable-input .form-control{font-size:16px;font-weight: bold}
+.editableform .form-control{width:100%;margin:3px 0;border:1px dashed #ccc;}
+.editableform .form-group{width: 100%}
+
+.alternativas{list-style: none}
+.alternativas .editable{width: 80%}
+.alternativas .editable-container{width: 80%}
+.alternativas .control-group{width: 100%}
+.editable-input{width: 100%;}
+
+
+
+.question table thead td{max-width: 100px; min-width: 80px; }
+.question table thead td textarea{width: 100%; max-height:80px;max-width: 100px}
+
+
+.select2-container--default{width:100% !important;}
+

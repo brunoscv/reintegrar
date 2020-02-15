@@ -1,0 +1,6 @@
+<tal:template metal:define-macro="Dashboard">
+    <ul class="grayarrow withlines">
+        <li class="first"><a href="{?php echo site_url('<?php echo plural($modulo) ?>') ?}/index/?master=true">Buscar <?php echo htmlentities(ucwords($modulo));?></a></li>
+        <li class="last"><a href="{?php echo site_url('<?php echo plural($modulo) ?>') ?}/create/?master=true">Cadastrar <?php echo htmlentities(ucwords($modulo));?></a></li>
+    </ul>
+</tal:template>

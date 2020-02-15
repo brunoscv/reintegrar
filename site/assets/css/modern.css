@@ -1,0 +1,182 @@
+/* Global Styles */
+
+/* NAVBAR DEFAULT */
+.navbar-default {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: #fff;
+}
+.navbar-default .navbar-nav > li > a {
+    color:#232323;
+}
+
+.navbar-nav > li > a > i {
+    margin-right: 10px;
+}
+
+.navbar-nav > li > a {
+    padding: 15px 25px;
+}
+
+.dropdown-menu > li > a > i {
+    margin-right: 10px;
+}
+
+.page-title {
+    padding: 10px 0 10px 0;
+    font-weight: 300;
+}
+
+.panel {
+    -webkit-box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0);
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0);
+    border: 0!important;
+    margin-bottom: 25px;
+    border-radius: 0;
+}
+
+.panel-body {
+    padding: 0 10px 10px 10px;
+}
+
+@media (min-width: 768px) {
+    .panel > .row > div:first-child {
+        padding-left: 15px;
+        padding-right: 0;
+    }
+
+    .panel > .row > div:last-child {
+        padding-left: 0;
+        padding-right: 15px;
+    }
+}
+
+.panel .panel-heading {
+    padding: 20px 10px;
+    overflow: hidden;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 0!important;
+    height: 55px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.panel .panel-heading .panel-title {
+    font-size: 17px;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 300;
+}
+
+.panel .panel-heading .panel-title small {
+    font-size: 80%;
+}
+
+.panel .panel-heading .panel-control {
+    float: right;
+    height: auto;
+}
+
+.panel .panel-heading .panel-control a {
+    text-decoration: none;
+    color: #ccc;
+    margin-left: 5px;
+    font-size: 14px;
+    float: left;
+}
+
+.panel .panel-heading .panel-control a:hover {
+    color: #a2a2a2;
+}
+
+.panel-default .panel-heading {
+    background: #fff;
+    border-color: #e7e7e7;
+}
+
+/* Personal Margin */
+.mg-top-20 {
+    margin-top: 20px;
+}
+
+/* Personal Buttons */
+.btn-sm-table {
+    padding: 2px 6px;
+    font-size:12px;
+}
+
+/* Select com Busca - Fundo Branco*/
+
+.btn-default.active, 
+.btn-default:active, .open > .dropdown-toggle.btn-default {
+    background-image: none;
+}
+.btn-default.active, 
+.btn-default.focus, 
+.btn-default:active, 
+.btn-default:focus, 
+.btn-default:hover, .open > .dropdown-toggle.btn-default {
+    background-color: #fff;
+}
+
+/* CSS TABLES */
+
+.table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #ddd;
+}
+
+.table > tbody > tr > td {
+    border-top: 0;
+}
+.btn-actions {
+    border: 0;
+    background-color: #fff;
+    padding: 0.5em;
+    color:#ddd;
+}
+.btn-actions > span {
+    padding-right:0.5em
+}
+.popover-content > a > span {
+    text-decoration:none;
+    color:#676a6d;
+}
+.navbar-nav {
+font-style:none;
+}
+
+.display-4 {
+    font-family: 'Intro';
+    font-size: 1rem;
+}
+.text-black {
+    color: #000000 !important;
+}
+#footer {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background-color: #222;
+    color:#f5f5f5;
+}
+.footer-block {
+    margin: 20px 0;
+}
+ 
+

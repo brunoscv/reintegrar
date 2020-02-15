@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tables</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="style-moz.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 8]>
+<link href="style_IE.css" rel="stylesheet" type="text/css" media="all" />
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="js/clock.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+<div class="container">
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header_logo">
+      <a href="#"><img src="images/logo.jpg" width="677" height="122" alt="Logo" class="logo" /></a>
+      <div class="right">
+        <ul class="dark">
+          <li class="first"><a href="#">My account</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+        <div class="clr"></div>
+        <ul class="light">
+          <li class="first"><a href="#"><img src="images/icon_email.gif" alt="picture" width="14" height="10" class="email" /></a><a href="#">37</a> incoming messages</li>
+          <li><a href="#"><img src="images/icon_logout.gif" alt="picture" width="16" height="16" class="logout" /></a><a href="#">logout</a></li>
+        </ul>
+        <p>Logged in as <a href="#">User Name</a></p>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="menu">
+      <div class="rightblock"><div><div>
+        <a href="#dialog1" name="modal"><span><span><img src="images/pimpa_check.gif" alt="picture" width="16" height="16" /> Dialog Box</span></span></a>
+        <a href="#dialog2" name="modal"><span><span><img src="images/pimpa_plus.gif" alt="picture" width="16" height="16" /> Login Box</span></span></a>
+      </div></div></div>
+      <ul>
+        <li class="first"><a href="index.html" class="active"><span><span><span>Home</span></span></span></a></li>
+        <li><a href="forms.html"><span><span><span>Admin Dashboard <img src="images/dropdown_arrow.gif" alt="picture" width="8" height="7" /></span></span></span></a>
+          <ul>
+            <li class="active"><a href="#">Navigation Example 1</a>
+              <ul>
+                <li><a href="#">Everybody lies 1-1</a></li>
+                <li><a href="#">Everybody lies 1-2</a></li>
+                <li><a href="#">Everybody lies 1-3</a></li>
+                <li><a href="#">Everybody lies 1-4</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Navigation Example 2</a></li>
+            <li><a href="#">Navigation Example 3</a></li>
+            <li class="active"><a href="#">Navigation Example 4</a>
+              <ul>
+                <li><a href="#">Everybody lies 4-1</a></li>
+                <li><a href="#">Everybody lies 4-2</a></li>
+                <li><a href="#">Everybody lies 4-3</a></li>
+                <li><a href="#">Everybody lies 4-4</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Navigation Example 5</a></li>
+            <li><a href="#">Navigation Example 6</a></li>
+          </ul>
+        </li>
+        <li><a href="messages.html"><span><span><span>Layout Dashboard</span></span></span></a></li>
+        <li><a href="tables.html"><span><span><span>Components</span></span></span></a></li>
+      </ul>
+      <div class="clr"></div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="content_res">
+      <div class="leftblock vertsortable">
+
+        <!-- gadget left 1 -->
+        <div class="gadget">
+          <div class="titlebar vertsortable_head">
+            <a href="#" class="hidegadget" rel="hide_block"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+            <h3>Form Example 1</h3>
+          </div>
+          <div class="gadgetblock">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p><a href="#">Learn more &raquo;</a></p>
+          </div>
+        </div>
+        
+        <!-- gadget left 2 -->
+        <div class="gadget">
+          <div class="titlebar vertsortable_head">
+            <a href="#" class="hidegadget" rel="hide_block"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+            <h3>Form Example 2</h3>
+          </div>
+          <div class="gadgetblock">
+            <form action="" method="post" id="form_tabexample" class="form_example">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="gwlines arborder">
+                <tr>
+                  <th width="28"><input name="utc1" id="utc1" type="checkbox" /></th>
+                  <th width="100">Name</th>
+                  <th width="140" class="lrborder">Email</th>
+                  <th width="56" class="calign">Ballance</th>
+                  <th class="lrborder">Site</th>
+                  <th colspan="3" class="calign">Actions</th>
+                </tr>
+                <tr>
+                  <td><input name="utc2" id="utc2" type="checkbox" /></td>
+                  <td>Mike Smith</td>
+                  <td class="lrborder"><a href="mailto:company@name.com">company@name.com</a></td>
+                  <td class="ralign">$25.00</td>
+                  <td class="lrborder"><a href="http://www.nthemes.net">www.nthemes.net</a></td>
+                  <td width="24"><a href="#"><img src="images/tab_icon1.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td width="24"><a href="#"><img src="images/tab_icon2.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td width="24"><a href="#"><img src="images/tab_icon3.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                </tr>
+                <tr>
+                  <td><input name="utc3" id="utc3" type="checkbox" /></td>
+                  <td>Mike Smith</td>
+                  <td class="lrborder"><a href="mailto:company@name.com">company@name.com</a></td>
+                  <td class="ralign">$25.00</td>
+                  <td class="lrborder"><a href="http://www.nthemes.net">www.nthemes.net</a></td>
+                  <td><a href="#"><img src="images/tab_icon1.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon2.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon3.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                </tr>
+                <tr>
+                  <td><input name="utc4" id="utc4" type="checkbox" /></td>
+                  <td>Mike Smith</td>
+                  <td class="lrborder"><a href="mailto:company@name.com">company@name.com</a></td>
+                  <td class="ralign">$25.00</td>
+                  <td class="lrborder"><a href="http://www.nthemes.net">www.nthemes.net</a></td>
+                  <td><a href="#"><img src="images/tab_icon1.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon2.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon3.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                </tr>
+                <tr>
+                  <td><input name="utc5" id="utc5" type="checkbox" /></td>
+                  <td>Mike Smith</td>
+                  <td class="lrborder"><a href="mailto:company@name.com">company@name.com</a></td>
+                  <td class="ralign">$25.00</td>
+                  <td class="lrborder"><a href="http://www.nthemes.net">www.nthemes.net</a></td>
+                  <td><a href="#"><img src="images/tab_icon1.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon2.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon3.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                </tr>
+                <tr>
+                  <td><input name="utc6" id="utc6" type="checkbox" /></td>
+                  <td>Mike Smith</td>
+                  <td class="lrborder"><a href="mailto:company@name.com">company@name.com</a></td>
+                  <td class="ralign">$25.00</td>
+                  <td class="lrborder"><a href="http://www.nthemes.net">www.nthemes.net</a></td>
+                  <td><a href="#"><img src="images/tab_icon1.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon2.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon3.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                </tr>
+                <tr>
+                  <td><input name="utc7" id="utc7" type="checkbox" /></td>
+                  <td>Mike Smith</td>
+                  <td class="lrborder"><a href="mailto:company@name.com">company@name.com</a></td>
+                  <td class="ralign">$25.00</td>
+                  <td class="lrborder"><a href="http://www.nthemes.net">www.nthemes.net</a></td>
+                  <td><a href="#"><img src="images/tab_icon1.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon2.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon3.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                </tr>
+                <tr class="last">
+                  <td><input name="utc8" id="utc8" type="checkbox" /></td>
+                  <td>Mike Smith</td>
+                  <td class="lrborder"><a href="mailto:company@name.com">company@name.com</a></td>
+                  <td class="ralign">$25.00</td>
+                  <td class="lrborder"><a href="http://www.nthemes.net">www.nthemes.net</a></td>
+                  <td><a href="#"><img src="images/tab_icon1.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon2.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/tab_icon3.gif" alt="picture" width="24" height="20" class="tabpimpa" /></a></td>
+                </tr>
+              </table>
+              <p><select id="dropdown" name="dropdown" class="cntresults">
+                <option selected="selected" value="10">10 results</option>
+                <option value="20">20 results</option>
+                <option value="30">30 results</option>
+                <option value="50">50 results</option>
+                <option value="100">100 results</option>
+              </select>
+              <a href="#" class="pnbtn">&laquo;</a> <input id="page" name="page" class="text mini" value="1 / 5" /> <a href="#" class="pnbtn">&raquo;</a></p>
+            </form>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</p>
+          </div>
+        </div>
+
+        <!-- gadget left 3 -->
+        <div class="gadget">
+          <div class="titlebar vertsortable_head">
+            <a href="#" class="hidegadget" rel="hide_block"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+            <h3>Administration Options</h3>
+          </div>
+          <div class="gadgetblock">
+            <form action="" method="post" id="form_userstable">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="gwlines">
+                <tr>
+                  <th width="40"><input name="utc1" id="utc1" type="checkbox" /></th>
+                  <th width="100">Name</th>
+                  <th width="100">Username</th>
+                  <th width="90">Date</th>
+                  <th width="120">Location</th>
+                  <th>E-mail</th>
+                  <th colspan="2">Actions</th>
+                </tr>
+                <tr>
+                  <td><input name="utc2" id="utc2" type="checkbox" /></td>
+                  <td>John Smith</td>
+                  <td>jonnysmi</td>
+                  <td>12.24.1980</td>
+                  <td>San Francisco, CA</td>
+                  <td><a href="mailto:mwwweefail@yahoo.com">mwwweefail@yahoo.com</a></td>
+                  <td width="28"><a href="#"><img src="images/pimpa_yes.gif" alt="picture" width="20" height="20" class="tabpimpa" /></a></td>
+                  <td width="28"><a href="#"><img src="images/pimpa_no.gif" alt="picture" width="20" height="20" class="tabpimpa" /></a></td>
+                </tr>
+                <tr>
+                  <td><input name="utc3" id="utc3" type="checkbox" /></td>
+                  <td>John Smith</td>
+                  <td>jonnysmi</td>
+                  <td>12.24.1980</td>
+                  <td>San Francisco, CA</td>
+                  <td><a href="mailto:mail@yahoo.com">mail@yahoo.com</a></td>
+                  <td><a href="#"><img src="images/pimpa_yes.gif" alt="picture" width="20" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/pimpa_no.gif" alt="picture" width="20" height="20" class="tabpimpa" /></a></td>
+                </tr>
+                <tr class="last">
+                  <td><input name="utc4" id="utc4" type="checkbox" /></td>
+                  <td>John Smith</td>
+                  <td>jonnysmi</td>
+                  <td>12.24.1980</td>
+                  <td>San Francisco, CA</td>
+                  <td><a href="mailto:m13dail@yahoo.com">m13dail@yahoo.com</a></td>
+                  <td><a href="#"><img src="images/pimpa_yes.gif" alt="picture" width="20" height="20" class="tabpimpa" /></a></td>
+                  <td><a href="#"><img src="images/pimpa_no.gif" alt="picture" width="20" height="20" class="tabpimpa" /></a></td>
+                </tr>
+              </table>
+            </form>
+
+          </div>
+        </div>
+        
+      </div>
+      <div class="rightblock vertsortable">
+
+        <!-- gadget right 1 -->
+        <div class="gadget">
+          <div class="titlebar vertsortable_head">
+            <a href="#" class="hidegadget" rel="hide_block"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+            <h3>Date &amp; Time</h3>
+          </div>
+          <div class="gadgetblock">
+            <div class="whiteblock">
+              <p class="timeclock"><img src="images/icon_clock.gif" alt="picture" width="26" height="26" /> <span id="tm">11:57</span></p>
+              <p class="light nobottom p_center">20th June, 2009, Friday</p>
+            </div>
+            <!-- Datepicker -->
+            <h3><img src="images/icon_calendar.gif" alt="picture" width="21" height="21" class="calendar" />Calendar</h3>
+            <div id="datepicker"></div>
+            <div class="clr"></div>
+            <p class="bot8px"><a href="#" class="colourbutton button_orange"><span><span>+  Add Event</span></span></a>&nbsp;<a href="#" class="colourbutton button_blue"><span><span>List Events</span></span></a></p>
+          </div>
+        </div>
+
+        <!-- gadget right 2 -->
+        <div class="gadget">
+          <div class="titlebar vertsortable_head">
+            <a href="#" class="hidegadget" rel="hide_block"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+            <h3>Dashboard</h3>
+          </div>
+          <div class="gadgetblock">
+            <ul class="grayarrow withlines">
+              <li class="first"><a href="#">Admin area example</a></li>
+              <li><a href="#">Forms and fields area example</a></li>
+              <li class="last"><a href="#">Tables area example</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- gadget right 3 -->
+        <div class="gadget">
+          <div class="titlebar vertsortable_head">
+            <a href="#" class="hidegadget" rel="hide_block"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+            <h3>Quick links</h3>
+          </div>
+          <div class="gadgetblock">
+            <div class="shadowpar">
+              <div class="pixshadow"><a href="#"><img src="images/icon_1.jpg" alt="picture" width="36" height="36" /></a></div>
+              <div class="pixshadow"><a href="#"><img src="images/icon_2.jpg" alt="picture" width="36" height="36" /></a></div>
+              <div class="pixshadow"><a href="#"><img src="images/icon_3.jpg" alt="picture" width="36" height="36" /></a></div>
+              <div class="pixshadow"><a href="#"><img src="images/icon_4.jpg" alt="picture" width="36" height="36" /></a></div>
+              <div class="pixshadow"><a href="#"><img src="images/icon_5.jpg" alt="picture" width="36" height="36" /></a></div>
+              <div class="pixshadow"><a href="#"><img src="images/icon_6.jpg" alt="picture" width="36" height="36" /></a></div>
+              <div class="pixshadow"><a href="#"><img src="images/icon_7.jpg" alt="picture" width="36" height="36" /></a></div>
+              <div class="pixshadow"><a href="#"><img src="images/icon_8.jpg" alt="picture" width="36" height="36" /></a></div>
+              <div class="clr"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- gadget right 4 -->
+        <div class="gadget">
+          <div class="titlebar vertsortable_head">
+            <a href="#" class="hidegadget" rel="hide_block"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+            <h3>Quick contact form</h3>
+          </div>
+          <div class="gadgetblock">
+            <form action="" method="post" id="form_quickcontact" class="form_quickcontact">
+            <ol><li>
+              <label for="name">Your name:</label>
+              <input id="name" name="name" class="text" />
+              <div class="clr"></div>
+            </li><li>
+              <label for="email">Your contact email:</label>
+              <input id="email" name="email" class="text" />
+              <div class="clr"></div>
+            </li><li>
+              <label for="message">Your questons &amp; comments:</label>
+              <textarea id="message" name="message" rows="6" cols="50"></textarea>
+              <div class="clr"></div>
+            </li><li>
+              <a href="#" class="colourbutton button_blue"><span><span>Contact us now</span></span></a>
+              <!-- <input type="image" name="imageField" id="imageField" src="images/button_send.gif" class="send" /> -->
+              <div class="clr"></div>
+            </li></ol>
+            </form>
+          </div>
+        </div>
+
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  
+  <!-- FOOTER -->
+  <!-- FOOTER -->
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="bgr">
+      <img src="images/footer_bg_left.jpg" width="430" height="99" alt="Logo" class="logo" />
+      <div class="f_right">
+        <ul>
+          <li class="first"><a href="index.html">Home</a></li>
+          <li><a href="">Administration</a></li>
+          <li><a href="">Settings</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <div class="clr"></div>
+        <p><a href="http://www.nthemes.net"><img src="images/footer_icon.gif" alt="picture" width="27" height="23" /></a>Website Administration by <a href="http://www.nthemes.net"><span>Trial Themes</span></a></p>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+
+  <!-- DIALOGS -->
+  <div id="dialogboxes">
+    <!-- dialog 1 -->
+    <div id="dialog1" class="window">
+      <div class="gadget">
+        <div class="titlebar">
+          <a href="#" class="close closegadget"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+          <h3>Thank you for</h3>
+        </div>
+        <div class="gadgetblock">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's standard dummy text</strong> ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</p>
+          <div class="linehr"></div>
+          <p class="bot8px"><a href="#" class="colourbutton button_blue"><span><span>Start Demo - Login Now</span></span></a></p>
+        </div>
+      </div>
+    </div>
+    <!-- dialog 2 -->
+    <div id="dialog2" class="window">
+      <div class="gadget">
+        <div class="titlebar">
+          <a href="#" class="close closegadget"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+          <h3>Welcome to Admin Area</h3>
+        </div>
+        <div class="gadgetblock">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's standard dummy text</strong> ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</p>
+          <div class="gadget err_or">
+            <div class="error_tit">
+              <a href="#" class="hideerr" rel="hide_err"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+              <a href="#" class="closeerr" rel="close_err"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+              <h3>Critical Error message</h3>
+            </div>
+            <div class="error_msg"><p><strong>Lorem Ipsum is simply dummy text</strong> of the printing</p></div>
+          </div>
+          <div class="gadget err_bl">
+            <div class="error_tit">
+              <a href="#" class="hideerr" rel="hide_err"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+              <a href="#" class="closeerr" rel="close_err"><img src="images/spacer.gif" alt="picture" width="19" height="33" /></a>
+              <h3>Error message</h3>
+            </div>
+            <div class="error_msg"><p><strong>Lorem Ipsum is simply dummy text</strong> of the printing</p></div>
+          </div>
+          <form action="" method="post" id="loginform" class="form_login">
+          <ol><li>
+            <label for="login">Your Login:</label>
+            <input id="login" name="login" class="text" />
+            <div class="clr"></div>
+          </li><li>
+            <label for="pwd">Your Password:</label>
+            <input id="pwd" name="pwd" class="text" type="password" />
+            <div class="clr"></div>
+          </li></ol>
+          </form>
+          <p class="bot8px"><a href="#" class="colourbutton button_blue"><span><span>Start Demo - Login Now</span></span></a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Mask to cover the whole screen -->
+    <div id="mask"></div>
+  </div>
+</div>
+
+</body>
+</html>
