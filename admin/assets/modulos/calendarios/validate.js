@@ -1,6 +1,6 @@
 //;
-(function($) {
-	$("#form_convenios").validate({
+$(function() {
+	$("#form_consultas").validate({
 		ignore : [],
 		errorElement : "em",
 		onfocusout : function(element) {
@@ -23,9 +23,33 @@
 			return false;
 		},
 		rules : {
-			nome_convenio : {
-				required : true
+			id:{
+					
+			},
+			pacientes_id:{
+				required:true
+			},
+			especialidades_id:{
+				required:true
+			},
+			profissionais_id:{
+				required:true
+			},
+			planos_id:{
+				required:true	
+			},
+			observacoes:{
+
+			},
+			status:{
+					
+			},
+			createdAt:{
+					
+			},
+			updatedAt:{
+					
 			}
 		}
 	});
-})(jQuery); 
+}); 

@@ -1,6 +1,6 @@
 //;
 $(function() {
-	$("#form_consultas").validate({
+	$("#form_perfil").validate({
 		ignore : [],
 		errorElement : "em",
 		onfocusout : function(element) {
@@ -23,33 +23,19 @@ $(function() {
 			return false;
 		},
 		rules : {
-			id:{
-					
+			descricao : {
+				required : true
 			},
-			pacientes_id:{
-				required:true
-			},
-			especialidades_id:{
-				required:true
-			},
-			profissionais_id:{
-				required:true
-			},
-			planos_id:{
-				required:true	
-			},
-			observacoes:{
-
-			},
-			status:{
-					
-			},
-			createdAt:{
-					
-			},
-			updatedAt:{
-					
+			'menus[]': {
+				required : true,
+				minlength: 1
 			}
-		}
+		},
+		messages: {
+            'menus[]': {
+                required: "Selecione pelo menos um menu",
+                minlength: "Selecione pelo menos um menu"
+            }
+        }
 	});
 }); 

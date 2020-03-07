@@ -1,6 +1,6 @@
 //;
-(function($) {
-	$("#form_conselhos").validate({
+$(function() {
+	$("#form_horarios").validate({
 		ignore : [],
 		errorElement : "em",
 		onfocusout : function(element) {
@@ -23,9 +23,21 @@
 			return false;
 		},
 		rules : {
-			nome_conselho : {
-				required : true
+			id:{
+					
+			},
+			desc_horario:{
+				required:true	
+			},
+			status:{
+					
+			},
+			createdAt:{
+					
+			},
+			updatedAt:{
+					
 			}
 		}
 	});
-})(jQuery); 
+}); 

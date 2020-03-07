@@ -36,10 +36,7 @@
 </head>
 <body>
 	<style type="text/css">
-		
-
 	</style>
-	
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -48,7 +45,10 @@
 					<span class="login100-form-title p-b-34">
 						Bem vindo à Clinica Reintegrar
 					</span>
-					<?php $this->load->view('layout/messages.php'); ?>
+					<div class="row"></div>
+					<div class="col-sm-12">
+						<?php $this->load->view('layout/messages.php'); ?>
+					</div>
 					<div class="wrap-input100 validate-input m-b-20" data-validate="Type user name">
 						<input class="input100" type="text" name="usuario" placeholder="usuário" required>
 						<span class="focus-input100"></span>

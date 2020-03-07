@@ -1,6 +1,6 @@
 //;
 $(function() {
-	$("#form_consultas").validate({
+	$("#form_periodo_consulta").validate({
 		ignore : [],
 		errorElement : "em",
 		onfocusout : function(element) {
@@ -26,22 +26,13 @@ $(function() {
 			id:{
 					
 			},
-			pacientes_id:{
-				required:true
-			},
-			especialidades_id:{
-				required:true
-			},
-			profissionais_id:{
-				required:true
-			},
-			planos_id:{
+			data:{
 				required:true	
 			},
-			observacoes:{
-
-			},
 			status:{
+					
+			},
+			consultas_id:{
 					
 			},
 			createdAt:{

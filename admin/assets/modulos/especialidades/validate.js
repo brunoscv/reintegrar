@@ -1,5 +1,5 @@
 //;
-(function($) {
+$(function() {
 	$("#form_especialidades").validate({
 		ignore : [],
 		errorElement : "em",
@@ -23,9 +23,21 @@
 			return false;
 		},
 		rules : {
-			nome_espec : {
-				required : true
+			id:{
+					
+			},
+			nome_espec:{
+				required:true	
+			},
+			status:{
+					
+			},
+			createdAt:{
+					
+			},
+			updatedAt:{
+					
 			}
 		}
 	});
-})(jQuery); 
+}); 

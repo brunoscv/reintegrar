@@ -1,6 +1,6 @@
 //;
 $(function() {
-	$("#form_consultas").validate({
+	$("#form_plano_procedimento").validate({
 		ignore : [],
 		errorElement : "em",
 		onfocusout : function(element) {
@@ -26,23 +26,17 @@ $(function() {
 			id:{
 					
 			},
-			pacientes_id:{
-				required:true
+			valor:{
+				required:true	
 			},
-			especialidades_id:{
-				required:true
-			},
-			profissionais_id:{
-				required:true
+			status:{
+					
 			},
 			planos_id:{
 				required:true	
 			},
-			observacoes:{
-
-			},
-			status:{
-					
+			especialidades_id:{
+				required:true	
 			},
 			createdAt:{
 					

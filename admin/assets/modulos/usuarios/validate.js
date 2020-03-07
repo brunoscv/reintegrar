@@ -24,7 +24,10 @@ $(function() {
 		},
 		rules : {
 			nome : {
-				required : true
+				
+			},
+			profissionais_id : {
+				
 			},
 			email : {
 				email : true

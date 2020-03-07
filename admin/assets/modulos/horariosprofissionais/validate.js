@@ -1,6 +1,6 @@
 //;
 $(function() {
-	$("#form_consultas").validate({
+	$("#form_horarios_profissionais").validate({
 		ignore : [],
 		errorElement : "em",
 		onfocusout : function(element) {
@@ -26,21 +26,6 @@ $(function() {
 			id:{
 					
 			},
-			pacientes_id:{
-				required:true
-			},
-			especialidades_id:{
-				required:true
-			},
-			profissionais_id:{
-				required:true
-			},
-			planos_id:{
-				required:true	
-			},
-			observacoes:{
-
-			},
 			status:{
 					
 			},
@@ -49,6 +34,15 @@ $(function() {
 			},
 			updatedAt:{
 					
+			},
+			horarios_id:{
+				required:true	
+			},
+			dias_semana_id:{
+				required:true	
+			},
+			profissionais_id:{
+				required:true	
 			}
 		}
 	});

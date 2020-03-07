@@ -1,5 +1,5 @@
 //;
-(function($) {
+$(function() {
 	$("#form_profissionais").validate({
 		ignore : [],
 		errorElement : "em",
@@ -23,9 +23,30 @@
 			return false;
 		},
 		rules : {
-			nome_prof : {
-				required : true
+			id:{
+					
+			},
+			nome_prof:{
+				required:true	
+			},
+			telefone_prof:{
+					
+			},
+			email_prof:{
+					
+			},
+			status:{
+					
+			},
+			createdAt:{
+					
+			},
+			updatedAt:{
+					
+			},
+			especialidades_id:{
+					
 			}
 		}
 	});
-})(jQuery); 
+}); 

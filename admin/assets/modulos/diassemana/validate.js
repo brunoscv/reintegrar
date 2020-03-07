@@ -1,6 +1,6 @@
 //;
-(function($) {
-	$("#form_pacientes").validate({
+$(function() {
+	$("#form_dias_semana").validate({
 		ignore : [],
 		errorElement : "em",
 		onfocusout : function(element) {
@@ -23,9 +23,21 @@
 			return false;
 		},
 		rules : {
-			nome_pac : {
-				required : true
+			id:{
+					
+			},
+			desc_dia_semana:{
+				required:true	
+			},
+			status:{
+					
+			},
+			createdAt:{
+					
+			},
+			updatedAt:{
+					
 			}
 		}
 	});
-})(jQuery); 
+}); 

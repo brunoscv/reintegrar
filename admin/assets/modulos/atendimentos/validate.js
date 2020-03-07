@@ -1,19 +1,19 @@
 //;
-$(function() {
-	$("#form_atendimentos").validate({
-		ignore : [],
-		errorElement : "em",
-		onfocusout : function(element) {
-			if ((!this.check(element) || !this.checkable(element) ) && (element.name in this.submitted || !this.optional(element))) {
+$(function () {
+	$("#form_atendimento").validate({
+		ignore: [],
+		errorElement: "em",
+		onfocusout: function (element) {
+			if ((!this.check(element) || !this.checkable(element)) && (element.name in this.submitted || !this.optional(element))) {
 				var currentObj = this;
 				var currentElement = element;
-				var delay = function() {
+				var delay = function () {
 					currentObj.element(currentElement);
 				};
 				setTimeout(delay, 0);
 			}
 		},
-		invalidHandler : function(form, validator) {
+		invalidHandler: function (form, validator) {
 			var errors = validator.numberOfInvalids();
 			if (errors) {
 				validator.errorList[0].element.focus();
@@ -22,37 +22,43 @@ $(function() {
 			}
 			return false;
 		},
-		rules : {
-						id:{
-									
-						},
-					consultas_id:{
-									
-						},
-					qtd_atendimentos:{
-						required:true	
-					},
-					freq_atendimentos:{
-								required:true	
-						},
-					data_inicio:{
-						required:true	
-					},
-					data_fim:{
-						required:true	
-					},
-					data_ref:{
-									
-						},
-					status:{
-									
-						},
-					createdAt:{
-									
-						},
-					updatedAt:{
-									
-						}
-				}
+		rules: {
+			id: {
+
+			},
+			pacientes_id: {
+
+			},
+			profissionais_id: {
+
+			},
+			especialidades_id: {
+
+			},
+			plano_procedimento_id: {
+
+			},
+			consultas_id: {
+
+			},
+			item_consulta_id: {
+
+			},
+			valor: {
+
+			},
+			tipo: {
+
+			},
+			status: {
+
+			},
+			createdAt: {
+
+			},
+			updatedAt: {
+
+			}
+		}
 	});
 }); 
