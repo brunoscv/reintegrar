@@ -1,1 +1,1 @@
-<?php $this->load->view("/modulos/atendimentos/form.php"); ?>
+<?php $this->load->view("/modulos/faturamento/form.php"); ?>

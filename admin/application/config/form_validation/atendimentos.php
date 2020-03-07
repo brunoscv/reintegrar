@@ -1,38 +1,48 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-$config['Atendimentos'] = array(
+$config['Atendimento'] = array(
 							array(
 								'field' => "id",
-								'label' => "Cod.",
+								'label' => "Id",
+								'rules' => ""
+									),
+							array(
+								'field' => "pacientes_id",
+								'label' => "Pacientes",
+								'rules' => ""
+									),
+							array(
+								'field' => "profissionais_id",
+								'label' => "Profissionais",
+								'rules' => ""
+									),
+							array(
+								'field' => "especialidades_id",
+								'label' => "Especialidades",
+								'rules' => ""
+									),
+							array(
+								'field' => "plano_procedimento_id",
+								'label' => "Plano/Proced",
 								'rules' => ""
 									),
 							array(
 								'field' => "consultas_id",
-								'label' => "Cod. Consulta",
+								'label' => "Consultas",
 								'rules' => ""
 									),
 							array(
-								'field' => "qtd_atendimentos",
-								'label' => "Qtd Atendimentos",
-								'rules' => "required"
+								'field' => "item_consulta_id",
+								'label' => "Item Consulta",
+								'rules' => ""
 									),
 							array(
-								'field' => "freq_atendimentos",
-								'label' => "Freq. Atendimentos",
-								'rules' => "required"
+								'field' => "valor",
+								'label' => "Valor",
+								'rules' => ""
 									),
 							array(
-								'field' => "data_inicio",
-								'label' => "Inicio",
-								'rules' => "required"
-									),
-							array(
-								'field' => "data_fim",
-								'label' => "Fim",
-								'rules' => "required"
-									),
-							array(
-								'field' => "data_ref",
-								'label' => "Data Ref.",
+								'field' => "tipo",
+								'label' => "Tipo Faturamento",
 								'rules' => ""
 									),
 							array(
@@ -52,5 +62,5 @@ $config['Atendimentos'] = array(
 									),
 );
 
-/* End of file atendimentos.php */
-/* Location: ./system/application/config/form_validation/atendimentos.php */
+/* End of file faturamento.php */
+/* Location: ./system/application/config/form_validation/faturamento.php */

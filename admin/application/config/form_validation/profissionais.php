@@ -1,43 +1,46 @@
-<?php
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 $config['Profissionais'] = array(
 							array(
-								'field' => 'id',
-								'label' => '#',
-								'rules' => ''
-							),
+								'field' => "id",
+								'label' => "Codigo",
+								'rules' => ""
+									),
 							array(
-								'field' => 'nome_prof',
-								'label' => 'Nome Profissional',
-								'rules' => 'required'
-							),
+								'field' => "nome_prof",
+								'label' => "Nome",
+								'rules' => "required"
+									),
 							array(
-								'field' => 'telefone_prof',
-								'label' => 'Telefone Profissional',
-								'rules' => ''
-							),
+								'field' => "telefone_prof",
+								'label' => "Telefone",
+								'rules' => ""
+									),
 							array(
-								'field' => 'conselhos_id',
-								'label' => 'Conselhos',
-								'rules' => ''
-							),
+								'field' => "email_prof",
+								'label' => "Email",
+								'rules' => ""
+									),
 							array(
-								'field' => 'num_conselho_prof',
-								'label' => 'Numero Conselho Profissional',
-								'rules' => ''
-							),
+								'field' => "status",
+								'label' => "Status",
+								'rules' => ""
+									),
 							array(
-								'field' => 'estados_id',
-								'label' => 'Estado Profissional',
-								'rules' => ''
-							),
+								'field' => "createdAt",
+								'label' => "createdAt",
+								'rules' => ""
+									),
 							array(
-								'field' => 'especialidades_id',
-								'label' => 'Especialidade Profissional',
-								'rules' => ''
-							),
+								'field' => "updatedAt",
+								'label' => "updatedAt",
+								'rules' => ""
+									),
 							array(
-								'field' => 'status',
-								'label' => 'Status',
-								'rules' => ''
-							)
-					);
+								'field' => "especialidades_id",
+								'label' => "especialidades_id",
+								'rules' => ""
+									),
+);
+
+/* End of file profissionais.php */
+/* Location: ./system/application/config/form_validation/profissionais.php */

@@ -10,22 +10,21 @@ class Auth extends MY_Controller {
 		if( $this->input->post("enviar") !== FALSE ){
 			$this->load->model("Usuarios_model");
 			if( $usuario = $this->Usuarios_model->getUsuario($this->input->post("usuario")) ){
-				echo$usuario->senha; exit;
 				if( $this->encryption->decrypt($usuario->senha) == $this->input->post("senha", TRUE) ){
-
 					$usuario->perfis = $this->Usuarios_model->getPerfisId($usuario->id);
 					#$usuario->setores = $this->Usuarios_model->getSetoresId($usuario->id);
 					
 					$usuarioLogado = array();
-					$usuarioLogado['id'] 	      = $usuario->id;
-					$usuarioLogado['nome'] 	      = $usuario->nome;
-					$usuarioLogado['usuario'] 	  = $usuario->usuario;
-					$usuarioLogado['perfis'] 	  = $usuario->perfis;
-					$usuarioLogado['principal']   = $usuario->principal;
-					//$usuarioLogado['setores']   = $usuario->setores;
-					$usuarioLogado['clientes_id'] = $usuario->clientes_id;
+					$usuarioLogado['id'] 				 = $usuario->id;
+					$usuarioLogado['nome'] 				 = $usuario->nome;
+					$usuarioLogado['usuario'] 			 = $usuario->usuario;
+					$usuarioLogado['perfis'] 			 = $usuario->perfis;
+					$usuarioLogado['principal']   		 = $usuario->principal;
+					$usuarioLogado['profissionais_id']   = $usuario->profissionais_id;
+					// $usuarioLogado['setores'] 		 = $usuario->setores;
+					$usuarioLogado['clientes_id'] 		 = $usuario->clientes_id;
 					
-					$this->session->set_userdata('userdata',$usuarioLogado);
+					$this->session->set_userdata('userdata', $usuarioLogado);
 					
 					$urlRedirect = "/";
 					if( $this->input->post("r") ){

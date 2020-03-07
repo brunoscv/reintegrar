@@ -1,0 +1,1 @@
+<?php $this->load->view("/modulos/itemconsulta/form.php"); ?>

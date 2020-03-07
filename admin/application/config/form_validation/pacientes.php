@@ -1,88 +1,41 @@
-<?php
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 $config['Pacientes'] = array(
 							array(
-									'field' => 'id',
-									'label' => '#',
-									'rules' => ''
-							),
+								'field' => "id",
+								'label' => "Codigo",
+								'rules' => ""
+									),
 							array(
-								'field' => 'nome_pac',
-								'label' => 'Nome Paciente',
-								'rules' => 'required'
-							),
+								'field' => "nome_pac",
+								'label' => "Nome",
+								'rules' => "required"
+									),
 							array(
-								'field' => 'telefonee_pac',
-								'label' => 'Telefone Paciente',
-								'rules' => ''
-							),
+								'field' => "email_pac",
+								'label' => "Email",
+								'rules' => ""
+									),
 							array(
-								'field' => 'telefonedois_pac',
-								'label' => 'Telefone 2 Paciente',
-								'rules' => ''
-							),
+								'field' => "telefone_pac",
+								'label' => "Telefone",
+								'rules' => ""
+									),
 							array(
-								'field' => 'carteira_pac',
-								'label' => 'Carteira Paciente',
-								'rules' => ''
-							),
+								'field' => "status",
+								'label' => "Status",
+								'rules' => ""
+									),
 							array(
-								'field' => 'data_nasc',
-								'label' => 'Data Nascimento',
-								'rules' => ''
-							),
+								'field' => "createdAt",
+								'label' => "createdAt",
+								'rules' => ""
+									),
 							array(
-								'field' => 'nome_responsavel',
-								'label' => 'Nome Responsavel',
-								'rules' => ''
-							),
-							array(
-								'field' => 'cep_pac',
-								'label' => 'CEP Paciente',
-								'rules' => ''
-							),
-							array(
-								'field' => 'endereco_pac',
-								'label' => 'Endereço Paciente',
-								'rules' => ''
-							),
-							array(
-								'field' => 'numero_pac',
-								'label' => 'Numero Paciente',
-								'rules' => ''
-							),
-							array(
-								'field' => 'cep_pac',
-								'label' => 'CEP Paciente',
-								'rules' => ''
-							),
-							array(
-								'field' => 'complemento_pac',
-								'label' => 'Complemento Paciente',
-								'rules' => ''
-							),
-							array(
-								'field' => 'bairro_pac',
-								'label' => 'Bairro Paciente',
-								'rules' => ''
-							),
-							array(
-								'field' => 'cidade_pac',
-								'label' => 'Cidade Paciente',
-								'rules' => ''
-							),
-							array(
-								'field' => 'uf_pac',
-								'label' => 'UF Paciente',
-								'rules' => ''
-							),
-							array(
-								'field' => 'convenios_id',
-								'label' => 'Convenio',
-								'rules' => ''
-							),
-							array(
-								'field' => 'status',
-								'label' => 'Status',
-								'rules' => ''
-							)
-					);
+								'field' => "updatedAt",
+								'label' => "updatedAt",
+								'rules' => ""
+									),
+);
+
+/* End of file pacientes.php */
+/* Location: ./system/application/config/form_validation/pacientes.php */

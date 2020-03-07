@@ -18,8 +18,13 @@ $config['Usuarios'] = array(
 							array(
 									'field' => 'nome',
 									'label' => 'Nome',
-									'rules' => 'required'
+									'rules' => ''
 							),
+							array(
+								'field' => 'profissionais_id',
+								'label' => 'Usuário',
+								'rules' => 'required'
+						),
 							array(
 									'field' => 'email',
 									'label' => 'E-mail',

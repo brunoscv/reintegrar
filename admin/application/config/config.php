@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/saudecasa/admin';
+$config['base_url']	= 'http://localhost/reintegrar2/admin';
 
 /*
 |--------------------------------------------------------------------------

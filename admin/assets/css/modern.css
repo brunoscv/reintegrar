@@ -185,7 +185,7 @@ body {
 }
 .statistic strong {
     font-size: 1.5em;
-    color: #333;
+    color: #50649c;
     font-weight: 700;
     line-height: 1;
 }
@@ -226,10 +226,15 @@ body {
   }
 
 /* Select com Busca - Fundo Branco*/
-
+.btn-default {
+    color: #50649c;
+    background-color: #fff;
+    border-color: #ccc;
+}
 .btn-default.active, 
 .btn-default:active, .open > .dropdown-toggle.btn-default {
     background-image: none;
+    color:#50649c;
 }
 .btn-default.active, 
 .btn-default.focus, 
@@ -237,6 +242,12 @@ body {
 .btn-default:focus, 
 .btn-default:hover, .open > .dropdown-toggle.btn-default {
     background-color: #fff;
+    color: #50649c;
+}
+
+.icon-17 {
+    font-size:17px !important;
+    font-weight: bold !important;
 }
 
 /* CSS TABLES */

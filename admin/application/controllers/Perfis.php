@@ -25,10 +25,10 @@ class Perfis extends MY_Controller {
 		$quantidadePerfis = $countPerfis->quantidade;
 		
 		$resultPerfis = $this->db
-							->select("*")
-							->from("perfis")
-							->limit($perPage,$offset)
-							->get();
+									->select("*")
+									->from("perfis")
+									->limit($perPage,$offset)
+									->get();
 		
 		$this->data['listaPerfis'] = $resultPerfis->result();
 		
@@ -93,6 +93,7 @@ class Perfis extends MY_Controller {
 			$perfil->menus = $this->Perfis_model->getMenusId($perfil->id);
 			
 			$this->data['item'] = &$perfil;
+
 			if( $this->input->post("enviar") ){
 				if( $this->form_validation->run('Perfis') === FALSE ){
 					$this->data['msg_error'] = validation_errors();

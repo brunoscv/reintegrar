@@ -1,130 +1,101 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        
-        <!-- Title -->
-        <title>Sistema de Projetos Padrão</title>
-        
-        <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta charset="UTF-8">
-        <meta name="description" content="Admin Dashboard Template" />
-        <meta name="keywords" content="admin,dashboard" />
-        <meta name="author" content="Steelcoders" />
-        
-        <!-- Styles -->
-        <!-- link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css' -->
-        <!-- <link href="<?php echo base_url(); ?>assets/plugins/pace-master/themes/blue/pace-theme-flash.css" rel="stylesheet"/> -->
-        <link href="<?php echo base_url(); ?>assets/plugins/uniform/css/uniform.default.min.css" rel="stylesheet"/>
-        <link href="<?php echo base_url(); ?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="<?php echo base_url(); ?>assets/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
-        <link href="<?php echo base_url(); ?>assets/plugins/line-icons/simple-line-icons.css" rel="stylesheet" type="text/css"/>	
-        <link href="<?php echo base_url(); ?>assets/plugins/waves/waves.min.css" rel="stylesheet" type="text/css"/>	
-        <link href="<?php echo base_url(); ?>assets/plugins/switchery/switchery.min.css" rel="stylesheet" type="text/css"/>
-        <link href="<?php echo base_url(); ?>assets/plugins/3d-bold-navigation/css/style.css" rel="stylesheet" type="text/css"/>	
-        
-        <!-- Theme Styles -->
-        <!--  <link href="<?php echo base_url(); ?>assets/css/modern.css" rel="stylesheet" type="text/css"/> -->
-        <!--  <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet" type="text/css"/> -->
-        <link href="<?php echo base_url(); ?>assets/css/login.css" rel="stylesheet" type="text/css"/>
-        
-        <script src="<?php echo base_url(); ?>assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
-        
-        
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        
-    </head>
-    <body class="page-login">
-        <main class="page-content">
-            <div class="page-inner login">
-                <div id="main-wrapper">
-                    <div class="row">
-                        <div class="col-md-12 center">
-                            <div class="login-box">
-                                <div class="logo-box">
-                                    <h1><!-- <a href="<?php echo base_url(); ?>" class="logo-text text-center"><span>Sistema Clínico</span></a> -->
-                                        <!-- <img class="logo-img" src="<?php echo base_url();?>assets/images/logomarca_login.png"> -->
-                                        <a href="<?php echo base_url(); ?>" class="logo-img text-center"></a>
-                                    </h1>
-                                </div>
-                                <!-- Logo Box -->
-                                <div class="form-box">
-                                    <p class="text-center m-t-md">Entre com suas credenciais de acesso.</p> 
-                                    <?php if(@$msg_error): ?>
-                                        <p class="text-center m-t-md"><?php echo $msg_error; ?></p>
-                                    <?php endif; ?>
-                                    <form class="m-t-md" action="<?php echo current_url(); ?>" method="post">
-                                        <input type="hidden" name="r" value="<?php echo $this->input->get_post("r"); ?>">
-                                        <div class="form-group mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="text" class="form-control" name="usuario" placeholder="Usuário" required>         
-                                        </div>
-                                        <div class="form-group  mb-2 mr-sm-2 mb-sm-0">
-                                            <input type="password" class="form-control" name="senha" placeholder="Senha" required>       
-                                        </div>
-                                        <button type="submit" name="enviar" class="btn btn-success btn-block">ACESSAR SISTEMA</button>
-                                    <!--   
-                                        <a href="javascript:;" class="display-block text-center m-t-md text-sm">Esqueceu sua senha?</a>
-                                        <p class="text-center m-t-xs text-sm">Do not have an account?</p>
-                                        <a href="register.html" class="btn btn-default btn-block m-t-md">Create an account</a>
-                                        -->
-                                    </form>
-                                    <p class="text-center m-t-md btn-margin-top"><?php echo date("Y")?> &copy; Todos os Direitos Reservados.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Row -->
-                </div><!-- Main Wrapper -->
-            </div><!-- Page Inner -->
-        </main><!-- Page Content -->
-        <style type="text/css">
-            .logo-box h1 a {
-                background-image: none, url("<?php echo base_url();?>assets/images/logo.jpg");
-                background-size: 84px;
-                background-position: center top;
-                background-repeat: no-repeat;
-                color: #444;
-                height: 84px;
-                font-size: 20px;
-                line-height: 1.3em;
-                margin: 0 auto 25px;
-                padding: 0;
-                width: 84px;
-                text-indent: -9999px;
-                outline: 0;
-                display: block;
-            }
-        </style>
+<html lang="en">
+<head>
+	<title>Clínica Reintegrar</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url() ?>assets/images/logo_reintegrar.png">
+	<link href="<?php echo base_url(); ?>assets/plugins/pace-master/themes/blue/pace-theme-flash.css" rel="stylesheet"/>
+	<link href="<?php echo base_url(); ?>assets/plugins/uniform/css/uniform.default.min.css" rel="stylesheet"/>
+	<link href="<?php echo base_url(); ?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="<?php echo base_url(); ?>assets/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+	<link href="<?php echo base_url(); ?>assets/plugins/line-icons/simple-line-icons.css" rel="stylesheet" type="text/css"/>	
+	<link href="<?php echo base_url(); ?>assets/plugins/waves/waves.min.css" rel="stylesheet" type="text/css"/>	
+	<link href="<?php echo base_url(); ?>assets/plugins/switchery/switchery.min.css" rel="stylesheet" type="text/css"/>
+	<link href="<?php echo base_url(); ?>assets/plugins/3d-bold-navigation/css/style.css" rel="stylesheet" type="text/css"/>	
+	
+	<!-- Theme Styles -->
+	<!--  <link href="<?php echo base_url(); ?>assets/css/modern.css" rel="stylesheet" type="text/css"/> -->
+	<!--  <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet" type="text/css"/> -->
+	<link href="<?php echo base_url(); ?>assets/css/login.css" rel="stylesheet" type="text/css"/>
+	
+	<script src="<?php echo base_url(); ?>assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
+	
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<style type="text/css">
+		
 
-        <!-- Javascripts -->
-        <script src="<?php echo base_url(); ?>assets/plugins/jquery/jquery-2.1.3.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/plugins/jquery-ui/jquery-ui.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/plugins/jquery-backstretch/jquery.backstretch.js"></script>
-        <!-- <script src="<?php echo base_url(); ?>assets/plugins/pace-master/pace.min.js"></script> -->
-        <script src="<?php echo base_url(); ?>assets/plugins/jquery-blockui/jquery.blockui.js"></script>
-        <script src="<?php echo base_url(); ?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/plugins/switchery/switchery.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/plugins/uniform/jquery.uniform.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/plugins/classie/classie.js"></script>
-        <script src="<?php echo base_url(); ?>assets/plugins/waves/waves.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/modern.min.js"></script>
-        <script type="text/javascript">
-            jQuery(document).ready(function() {
-                /* Fullscreen background */
-                $.backstretch("<?php echo base_url(); ?>assets/images/inicial.jpg");
-                
-                $('#top-navbar-1').on('shown.bs.collapse', function(){
-                    $.backstretch("resize");
-                });
-                $('#top-navbar-1').on('hidden.bs.collapse', function(){
-                    $.backstretch("resize");
-                });
-                 /*  Fim do Fullscreen background */
-            });
-        </script>
-    </body>
+	</style>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="<?php echo current_url(); ?>" method="post">
+					<input type="hidden" name="r" value="<?php echo $this->input->get_post("r"); ?>" />
+					<span class="login100-form-title p-b-34">
+						Bem vindo à Clinica Reintegrar
+					</span>
+					<div class="wrap-input100 validate-input m-b-20" data-validate="Type user name">
+						<input class="input100" type="text" name="usuario" placeholder="usuário" required>
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-20" data-validate="Type password">
+						<input class="input100" type="password" name="senha" placeholder="senha" required>
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button type="submit" name="enviar" class="login100-form-btn">
+							Entrar no Sistema
+						</button>
+					</div>
+
+					<div class="w-full text-center p-t-27">
+						<span class="txt1">
+							Esqueceu
+						</span>
+
+						<a href="#" class="txt2">
+							Usuário / Senha ?
+						</a>
+					</div>
+
+					<div class="w-full text-center">
+						<a href="#" class="txt3">
+							ENTRAR
+						</a>
+					</div>
+				</form>
+				<div class="login100-more"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Javascripts -->
+	<script src="<?php echo base_url(); ?>assets/plugins/jquery/jquery-2.1.3.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/plugins/jquery-backstretch/jquery.backstretch.js"></script>
+	<script src="<?php echo base_url(); ?>assets/plugins/pace-master/pace.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+	<script src="<?php echo base_url(); ?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/plugins/switchery/switchery.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/plugins/uniform/jquery.uniform.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/plugins/classie/classie.js"></script>
+	<script src="<?php echo base_url(); ?>assets/plugins/waves/waves.min.js"></script>
+	<script src="<?php echo base_url(); ?>assets/js/modern.min.js"></script>
+</body>
 </html>

@@ -4,11 +4,14 @@ class Menus extends MY_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		
 		$this->_auth();
+		
 		$this->data['campos'] = array(
 			'm.descricao' => 'Descrição',
 			'm.url' => 'Url'
 		);
+		
 	}
 	
 	public function index(){
@@ -43,16 +46,13 @@ class Menus extends MY_Controller {
 			}
 		}
 		$resultMenus = $this->db
-						->select("m.*, menupai.descricao as pai")
-						->from("menus m")
-						->join("menus AS menupai","menupai.id = m.menus_id","left")
-						->limit($perPage,$offset)
-						->get();
+									->select("m.*, menupai.descricao as pai")
+									->from("menus m")
+									->join("menus AS menupai","menupai.id = m.menus_id","left")
+									->limit($perPage,$offset)
+									->get();
 		
 		$this->data['listaMenus'] = $resultMenus->result();
-
-
-		// arShow($this->data['listaMenus']); exit;
 		
 		$this->load->library('pagination');
 		$config['base_url'] = site_url("menus/index")."?";
@@ -145,56 +145,6 @@ class Menus extends MY_Controller {
 				redirect('menus/index');
 			}
 		}
-	}
-
-	public function ajax(){
-		$perPage = '10';
-		$offset = ($this->input->get("per_page")) ? $this->input->get("per_page") : "0";
-		
-		if( !is_null($this->input->get('busca')) ){
-			$campo = $this->input->get('filtro_field', true);
-			$valor = $this->input->get('filtro_valor', true);
-
-			if($campo && $valor){
-				if( array_key_exists($campo, $this->data['campos']) ){
-					$this->db->where("{$campo} LIKE","%".$valor."%");
-				}
-			}
-		}
-		$countMenus = $this->db
-							->select("count(id) AS quantidade")
-							->from("menus m")
-							->get()->row();
-		
-		$quantidadeMenus = $countMenus->quantidade;
-		
-		if( !is_null($this->input->get('busca')) ){
-			$campo = $this->input->get('filtro_field', true);
-			$valor = $this->input->get('filtro_valor', true);
-
-			if($campo && $valor){
-				if( array_key_exists($campo, $this->data['campos']) ){
-					$this->db->where("{$campo} LIKE","%".$valor."%");
-				}
-			}
-		}
-		$resultMenus = $this->db
-						->select("m.*, menupai.descricao as pai")
-						->from("menus m")
-						->join("menus AS menupai","menupai.id = m.menus_id","left")
-						->limit($perPage,$offset)
-						->get();
-		
-		$this->data['listaMenus'] = $resultMenus->result();
-		
-		$this->load->library('pagination');
-		$config['base_url'] = site_url("menus/ajax")."?";
-		$config['total_rows'] = $quantidadeMenus;
-		$config['per_page'] = $perPage;
-		
-		$this->pagination->initialize($config);
-		
-		$this->data['paginacao'] = $this->pagination->create_links(); 
 	}
 	
 }
