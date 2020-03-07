@@ -48,6 +48,7 @@
 					<span class="login100-form-title p-b-34">
 						Bem vindo à Clinica Reintegrar
 					</span>
+					<?php $this->load->view('layout/messages.php'); ?>
 					<div class="wrap-input100 validate-input m-b-20" data-validate="Type user name">
 						<input class="input100" type="text" name="usuario" placeholder="usuário" required>
 						<span class="focus-input100"></span>

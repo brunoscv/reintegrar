@@ -25,9 +25,9 @@
 
 				                </div>
 								<div class="panel-body">
-									<?php echo $this->load->view("layout/messages"); ?>
+									<?php $this->load->view("layout/messages"); ?>
 									<div class="table-responsive">
-										<?php echo $this->load->view('layout/search.php'); ?>
+										<?php $this->load->view('layout/search.php'); ?>
 										<table class="display table" style="width: 100%; cellspacing: 0;">
 											<thead>
 												<tr>

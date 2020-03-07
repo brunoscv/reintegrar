@@ -1,6 +1,6 @@
 <div class="row" data-container="all">
 	<div class="col-md-4">
-		<?php echo $this->load->view('layout/search.php'); ?>
+		<?php $this->load->view('layout/search.php'); ?>
 	</div>
 	<div class="col-md-8" data-container="main">
 		<div class="panel panel-default">
@@ -11,7 +11,7 @@
 			</div>
 			<!-- /widget-header -->
 			<div class="panel-body">
-				<?php echo $this->load->view("layout/messages"); ?>
+				<?php $this->load->view("layout/messages"); ?>
 				<table class="display table" style="width: 100%; cellspacing: 0;">
 					<thead>
 						<tr>

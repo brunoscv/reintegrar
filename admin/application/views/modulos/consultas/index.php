@@ -12,7 +12,7 @@
 <div id="main-wrapper" class="container">
 	<div class="row" data-container="all">
 		<div class="col-md-12">
-			<?php echo $this->load->view('layout/messages.php'); ?>
+			<?php $this->load->view('layout/messages.php'); ?>
 			<div class="panel panel-transparent">
 				<div class="panel-body">
 					<div class="row" data-container="all">
@@ -25,7 +25,7 @@
 								</div>
 								<div class="panel-body" style="margin-top:10px;">
 									<div class="table-responsive">
-										<?php echo $this->load->view('layout/search.php'); ?>
+										<?php $this->load->view('layout/search.php'); ?>
 										<table class="display table table-hover mg-top-20 tablesaw tablesaw-stack" data-tablesaw-mode="stack">
 											<thead>
 												<tr>

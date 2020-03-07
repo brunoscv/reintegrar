@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="span4">
-		<?php echo $this->load->view('layout/search.php'); ?>
+		<?php $this->load->view('layout/search.php'); ?>
 	</div>
 	<div class="span8">
 		<div class="widget">
@@ -10,7 +10,7 @@
 			</div>
 			<!-- /widget-header -->
 			<div class="widget-content">
-				<?php echo $this->load->view("layout/messages"); ?>
+				<?php $this->load->view("layout/messages"); ?>
 				<form id="form_usuario" class="form-horizontal" method="post">
 					<fieldset>
 						<div class="alert alert-error">

@@ -12,7 +12,7 @@
 				<div class="alterar-visualizacao" id='alterar-visualizacao'></div>
 			</div>
 			<div class="panel-body">
-				<?php echo $this->load->view('layout/messages.php'); ?>
+				<?php $this->load->view('layout/messages.php'); ?>
 				<div class="col-md-12">
 					<div id='calendar'></div>
 				</div>

@@ -17,7 +17,7 @@
                 <div class="panel-body">
 					<div class="row" data-container="all">
 						<div class="col-md-4">
-							<?php echo $this->load->view('layout/search.php'); ?>
+							<?php $this->load->view('layout/search.php'); ?>
 						</div>
 						<div class="col-md-8" data-container="main">
 							<div class="panel panel-default">
@@ -26,7 +26,7 @@
 				                    <a href="<?php echo site_url("itemconsulta/");?>" class="btn btn-primary pull-right"><span class="fa fa-list"></span> Ir para a Listagem</a>
 				                </div>
 								<div class="panel-body" style="margin-top:10px;">
-									<?php echo $this->load->view('layout/messages.php'); ?>
+									<?php $this->load->view('layout/messages.php'); ?>
 									<form id="form_item_consulta" action="<?php echo current_url(); ?>" class="form-horizontal" method="post">
 
 																					<div class="form-group">
@@ -37,7 +37,7 @@
 												</div>
 											</div>
 																																<div class="form-group">
-												<label class="col-sm-2 control-label" for="horarios_id">Horário</label>
+												<label class="col-sm-2 control-label" for="horarios_id">Horï¿½rio</label>
 												<div class="col-sm-10">
 													<input name="horarios_id" type="text" id="horarios_id" class="form-control" value="<?php echo set_value("horarios_id", @$item->horarios_id) ?>" />
 <?php echo form_error('horarios_id'); ?>

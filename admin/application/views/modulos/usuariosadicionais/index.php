@@ -16,7 +16,7 @@
                 <div class="panel-body">
                 	<div class="row">
                 		<div class="col-md-4">
-                			<?php echo $this->load->view('layout/search.php'); ?>
+                			<?php $this->load->view('layout/search.php'); ?>
                 		</div>
 						<div class="col-md-8" data-container="main">
 							<div class="panel panel-default">
@@ -25,7 +25,7 @@
 									<a href="<?php echo site_url("usuariosadicionais/criar/");?>?clientes_id=<?php echo $this->clientes_id; ?>" class="btn btn-primary pull-right"> Adicionar </a>
 								</div>
 								<div class="panel-body">
-									<?php echo $this->load->view("layout/messages"); ?>
+									<?php $this->load->view("layout/messages"); ?>
 									<div class="table-responsive">
 										<table class="display table" style="width: 100%; cellspacing: 0;">
 											<thead>

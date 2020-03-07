@@ -14,7 +14,7 @@
 		<div class="col-md-12">
 			<div class="panel panel-transparent">
 				<div class="panel-body">
-					<?php echo $this->load->view('layout/messages.php'); ?>
+					<?php $this->load->view('layout/messages.php'); ?>
 					<div class="row" data-container="all">
 						<div class="col-md-12" data-container="main">
 							<div class="panel panel-default">
@@ -23,7 +23,7 @@
 									<a href="<?php echo site_url("horariosprofissionais/criar");?>" class="btn btn-primary pull-right"><span class="fa fa-plus"></span> Adicionar Horario Profissionai </a>
 								</div>
 								<div class="panel-body" style="margin-top:10px;">
-									<?php echo $this->load->view('layout/search.php'); ?>
+									<?php $this->load->view('layout/search.php'); ?>
 									<div class="table-responsive">
 										<table class="display table">
 											<thead>

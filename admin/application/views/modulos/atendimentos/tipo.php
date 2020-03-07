@@ -23,7 +23,7 @@
 								</div>
 								<div class="panel-body" style="margin-top:10px;">
 									<div class="table-responsive">
-										<?php echo $this->load->view('layout/filters.php'); ?>
+										<?php $this->load->view('layout/filters.php'); ?>
 										<table class="display table" style="margin-top:2em;">
 											<thead>
 												<tr>

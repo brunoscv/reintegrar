@@ -6,7 +6,7 @@
 				<div class="alterar-visualizacao" id='alterar-visualizacao'></div>
 			</div>
 			<div class="panel-body">
-				<?php echo $this->load->view('layout/messages.php'); ?>
+				<?php $this->load->view('layout/messages.php'); ?>
 				<div class="col-md-12">
 					<form class="form-inline" style="margin-top:10px;" action="<?php echo site_url( strtolower(get_active_class()) ); ?>">
 						<div class="input-group m-b-sm">

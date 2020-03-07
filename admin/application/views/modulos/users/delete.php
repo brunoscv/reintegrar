@@ -17,7 +17,7 @@
                 <div class="panel-body">
 					<div class="row" data-container="all">
 						<div class="col-md-4">
-							<?php echo $this->load->view('layout/search.php'); ?>
+							<?php $this->load->view('layout/search.php'); ?>
 						</div>
 						<div class="col-md-8" data-container="main">
 							<div class="panel panel-default">
@@ -26,7 +26,7 @@
 				                    <a href="<?php echo site_url("users/");?>" class="btn btn-primary pull-right"><span class="fa fa-list"></span> Ir para a Listagem</a>
 				                </div>
 								<div class="panel-body" style="margin-top:10px;">
-									<?php echo $this->load->view("layout/messages"); ?>
+									<?php $this->load->view("layout/messages"); ?>
 									<form id="form_usuario" class="form-horizontal" method="post">
 										<div class="alert alert-danger" role="alert">
 					                    	<strong>Atenção!</strong> 
@@ -39,7 +39,7 @@
 											</div>
 										</div>
 																				<div class="form-group">
-											<label class="col-sm-2 control-label" for="usuario">Usu�rio</label>
+											<label class="col-sm-2 control-label" for="usuario">Usu�rio</label>
 											<div class="col-sm-10">
 												<input type="text" disabled="" class="form-control" value="<?php echo set_value("usuario", $item->usuario); ?>" name="usuario" id="usuario">
 											</div>

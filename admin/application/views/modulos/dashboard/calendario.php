@@ -90,7 +90,7 @@ div.today {
 				<div class="alterar-visualizacao" id='alterar-visualizacao'></div>
 			</div>
 			<div class="panel-body">
-				<?php echo $this->load->view('layout/messages.php'); ?>
+				<?php $this->load->view('layout/messages.php'); ?>
 				<div class="row">
 					<div class="col-md-12">
 						<?php echo $calendario; ?>

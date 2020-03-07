@@ -23,7 +23,7 @@
 				                    <a href="<?php echo site_url("menus");?>" class="btn btn-primary pull-right"><span class="fa fa-list"></span> Listagem de menus</a>
 				                </div>
 								<div class="panel-body" style="margin-top:10px;">
-									<?php echo $this->load->view('layout/messages.php'); ?>
+									<?php $this->load->view('layout/messages.php'); ?>
 
 									<form id="form_menu" class="form-horizontal" method="post" action="<?php echo current_url(); ?>">
 										<input type="hidden" id="id" name="id" value="<?php echo set_value("id", @$item->id); ?>" />

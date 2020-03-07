@@ -23,7 +23,7 @@
 				                    <a href="<?php echo site_url("usuarios/");?>" class="btn btn-primary pull-right"><span class="fa fa-list"></span> Listagem de Usuários</a>
 				                </div>
 								<div class="panel-body" style="margin-top:10px;">
-									<?php echo $this->load->view('layout/messages.php'); ?>
+									<?php $this->load->view('layout/messages.php'); ?>
 									<form id="form_alterarsenha" action="<?php echo current_url(); ?>" class="form-horizontal" method="post">
 										
 										<div class="form-group">

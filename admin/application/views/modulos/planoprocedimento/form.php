@@ -15,7 +15,7 @@
 		<div class="col-md-12">
 			<div class="panel panel-transparent">
 				<div class="panel-body">
-				<?php echo $this->load->view('layout/messages.php'); ?>
+				<?php $this->load->view('layout/messages.php'); ?>
 				<div class="row" data-container="all">
 						<div class="col-md-12" data-container="main">
 							<div class="panel panel-default">

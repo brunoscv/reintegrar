@@ -23,7 +23,7 @@
 				                    <a href="<?php echo site_url("permissoes/");?>" class="btn btn-primary pull-right"><span class="fa fa-list"></span> Ir para a Listagem</a>
 				                </div>
 								<div class="panel-body" style="margin-top:10px;">
-									<?php echo $this->load->view("layout/messages"); ?>
+									<?php $this->load->view("layout/messages"); ?>
 									<form id="form_usuario" class="form-horizontal" method="post">
 										<div class="alert alert-danger" role="alert">
 					                    	<strong>Atenção!</strong> 

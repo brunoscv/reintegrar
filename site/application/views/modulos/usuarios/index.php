@@ -16,7 +16,7 @@
                 <div class="panel-body">
 					<div class="row" data-container="all">
 						<div class="col-md-4">
-							<?php echo $this->load->view('layout/search.php'); ?>
+							<?php $this->load->view('layout/search.php'); ?>
 						</div>
 						<div class="col-md-8" data-container="main">
 							<div class="panel panel-default">
@@ -25,7 +25,7 @@
 				                    <a href="<?php echo site_url("usuarios/criar");?>" class="btn btn-primary pull-right"><span class="fa fa-plus"></span> Adicionar Usuário</a>
 				                </div>
 								<div class="panel-body" style="margin-top:10px;">
-									<?php echo $this->load->view('layout/messages.php'); ?>
+									<?php $this->load->view('layout/messages.php'); ?>
 									<div class="table-responsive">
 										<table class="display table">
 											<thead>

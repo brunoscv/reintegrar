@@ -13,7 +13,7 @@
 					<a href="<?php echo site_url("consultas/");?>" class="btn btn-primary pull-right"><span class="fa fa-arrow-left"></span> Voltar </a>
 				</div>
 				<div class="panel-body" style="margin-top:10px;">
-                <?php echo $this->load->view('layout/messages.php'); ?>
+                <?php $this->load->view('layout/messages.php'); ?>
 					<div class="table-responsive">
 						<table class="display table table-hover mg-top-20">
 							<div class="col-md-12">

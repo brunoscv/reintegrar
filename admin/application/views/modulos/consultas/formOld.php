@@ -23,7 +23,7 @@
 									<a href="<?php echo site_url("consultas/");?>" class="btn btn-primary pull-right"><span class="fa fa-list"></span> Ir para a Listagem</a>
 								</div>
 								<div class="panel-body" style="margin-top:10px;">
-									<?php echo $this->load->view('layout/messages.php'); ?>
+									<?php $this->load->view('layout/messages.php'); ?>
 									<!-- <form id="form_consultas" action="<?php echo current_url(); ?>" class="form-horizontal" method="post"> -->
 									<form id="form_consultas" class="form-horizontal">
 									<input name="id" type="hidden" id="id" class="form-control" value="<?php echo set_value("id", @$item->id) ?>" />

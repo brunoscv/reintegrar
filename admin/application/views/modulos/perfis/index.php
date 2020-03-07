@@ -15,7 +15,7 @@
         <div class="col-md-12">
             <div class="panel panel-transparent">
                 <div class="panel-body">
-					<?php echo $this->load->view("layout/messages"); ?>
+					<?php $this->load->view("layout/messages"); ?>
                 	<div class="row">
 						<div class="col-md-12" data-container="main">
 							<div class="panel panel-default">
@@ -25,7 +25,7 @@
 				                </div>
 								<div class="panel-body">
 									<div class="table-responsive">
-                						<?php echo $this->load->view('layout/search.php'); ?>
+                						<?php $this->load->view('layout/search.php'); ?>
 										<table class="display table" style="width: 100%; cellspacing: 0;">
 											<thead>
 												<tr>
