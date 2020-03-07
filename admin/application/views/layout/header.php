@@ -81,6 +81,10 @@
         border-color: #26a69a;
         color: #fafafa;
     }
+
+    .navbar-nav > li > a {
+        color: white;
+    }
     </style>
 </head>
 <script type='text/javascript'>//<![CDATA[
