@@ -158,7 +158,7 @@ $(function () {
 							complete: function (data) {
 								setTimeout(function () {
 									swal("Deletado!", "Você reiniciou o status desse atendimento.", "success");
-									window.location.href = "https://clinicareintegrar.com/sistema/dashboard";
+									window.location.href = "admin/dashboard";
 								}, 3000);
 
 							}
@@ -167,6 +167,12 @@ $(function () {
 						swal("Cancelado", "O status do seu atendimento foi mantido :)", "error");
 					}
 				});
+		});
+
+		$("body").on('click', '.anotacoes', function (event) {
+			var consultas_id = $(this).attr("consultas_id");
+			window.location.href = ""
+
 		});
 	});
 });

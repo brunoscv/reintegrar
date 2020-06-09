@@ -7,13 +7,13 @@ class Consultas extends MY_Controller {
 		$this->_auth();
 		
 		$this->load->model("Consultas_model");
-		$this->load->model("PlanoProcedimento_model");
+		$this->load->model("Planoprocedimento_model");
 		$this->load->model("Especialidades_model");
 		$this->load->model("Pacientes_model");
 		$this->load->model("Profissionais_model");
 		$this->load->model("Horarios_model");
-		$this->load->model("DiasSemana_model");
-		$this->load->model("HorariosProfissionais_model");
+		$this->load->model("Diassemana_model");
+		$this->load->model("Horariosprofissionais_model");
 		$this->load->model("Planos_model");
 		
 		//adicione os campos da busca

@@ -10,6 +10,7 @@ class Dashboard extends MY_Controller {
 		//adiciona os dados do login para fazer as visualizacoes de informacoes
 		$this->data['user_id']  = $this->session->userdata('userdata')['profissionais_id'];
 		$this->data['admin'] 	= $this->session->userdata('userdata')['principal'];
+		$this->data['logged_user'] = $this->session->userdata('userdata')['id'];
 
 		//adicione os campos da busca
 		$camposFiltros["pr.nome_prof"] = "Nome Profissional";
@@ -73,7 +74,7 @@ class Dashboard extends MY_Controller {
 		// Recupera as consultas geradas da data atual.
 		$resultConsultas = 
 			$this->db
-				 ->select("c.id, p.nome_pac, pr.nome_prof, e.nome_espec, pl.nome_plano, hc.id AS horario_consulta_id, hr.id AS horario_id, hr.desc_horario, hc.dia_semana_id, ds.desc_dia_semana, NOW() AS data")
+				 ->select("c.id, p.nome_pac, pr.nome_prof, e.nome_espec, pl.nome_plano, hc.dias_mes_ano AS data, hc.id AS horario_consulta_id, hr.id AS horario_id, hr.desc_horario, hc.dia_semana_id, ds.desc_dia_semana")
 				 ->from("consultas AS c")
 				 ->join("pacientes AS p", "c.pacientes_id = p.id")
 				 ->join("new_horarios_consulta AS hc", "hc.consultas_id = c.id")
@@ -169,7 +170,7 @@ class Dashboard extends MY_Controller {
 				 ->join("faturamento as f", "f.consultas_id = c.id")
 				 ->join("atendimentos as atd", "f.atendimentos_id = atd.id")
 				 ->where(array("hc.dia_semana_id" => $dia_semana_id, "c.status" => 1, "atd.data_presenca"=> date("Y-m-d"), "hc.atendimento" => 1))
-				 ->group_by("hc.id")
+				 /* ->group_by("hc.id") */
 				 ->order_by("hr.id", "ASC")
 				 ->get()->result();
 
@@ -547,6 +548,69 @@ class Dashboard extends MY_Controller {
 		exit;
 	}
 
+	function comentarios($consulta_id = null) {
+		$consulta_id = $this->uri->segment(3);
+
+		$consulta = array();
+		$consulta = $this->db->from("consultas AS c")->where("c.id", $consulta_id)->get()->result();
+		if(!$consulta || !$consulta_id) {
+			$this->session->set_flashdata("msg_error", "Você não pode acessar essa funcionalidade.");
+			redirect('dashboard/index');
+		} else {
+			$resultComentarios = $this->db
+				->select("u.nome, cc.id, cc.comentario, cc.usuario_id, DATE_FORMAT(cc.date, '%d/%m/%Y %H:%i hrs') as data_comentario, cc.consulta_id")
+				->from("comentarios_consulta AS cc")
+				->join("usuarios AS u", "cc.usuario_id = u.id")
+				->where("cc.consulta_id", $consulta_id)
+				->order_by("cc.date", "DESC")
+				->get();
+			$this->data['listaComentarios'] = $resultComentarios->result();
+			$this->data['consulta_id'] = $consulta_id;
+
+			//arShow($this->data['listaComentarios']); exit;
+		}	
+	}
+
+	function salvar_comentarios($consulta_id) {
+
+		$consulta = array();
+		$consulta = $this->db->from("consultas AS c")->where("c.id", $consulta_id)->get()->result();
+		if(!$consulta) {
+			$result['sucesso'] = false;
+		} else {
+	
+			$usuario_id = $this->data['logged_user'];
+		
+			$comentario 					= array();
+			$comentario["consulta_id"] 		= $consulta_id;
+			$comentario["comentario"] 		= $this->input->post("comentario");
+			$comentario["usuario_id"] 		= $usuario_id;
+			$comentario["date"] 			= date("Y-m-d H:i:s");
+			
+			$sql = $this->db->insert("comentarios_consulta", $comentario);
+			$comentario_id = $this->db->insert_id();
+
+			if($sql) {
+				$resultComentarios = array();
+				$resultComentarios = $this->db
+					->select("u.nome, cc.id, cc.comentario, cc.usuario_id, DATE_FORMAT(cc.date, '%d/%m/%Y %H:%i hrs') as data_comentario, cc.consulta_id")
+					->from("comentarios_consulta AS cc")
+					->join("usuarios AS u", "cc.usuario_id = u.id")
+					->where("cc.consulta_id", $consulta_id)
+					->order_by("cc.date", "DESC")
+					->get();
+				$result['listaComentarios'] = $resultComentarios->result();
+				$result['sucesso'] = true;
+			} else {
+				$result['sucesso'] = false;
+			}
+		}
+
+		header('Content-Type: application/json');
+		echo json_encode($result);
+		exit;
+	}
+
 	//Esse comando insere dentro da tabela dias_semana_ano
 	// todos os dias do ano entre as datas escolhidas abaixo.
 
@@ -583,7 +647,6 @@ class Dashboard extends MY_Controller {
 	}
 	
 
-	
 }
 
 /* End of file welcome.php */
