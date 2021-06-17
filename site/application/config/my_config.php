@@ -24,14 +24,14 @@ $config['motivoCancelamento'] = array("cancelado_cliente"=>"Cancelado pelo clien
 $config['filiais'] = array("1"=>"Unidade Master", "2"=>"Unidade Maceió", "3"=>"Unidade Belem", "4"=>"Unidade Teresina", "5"=>"Unidade Cuiabá");
 
 
-$config['smtp_host'] = "mail.clipdata.com.br";
+$config['smtp_host'] = "";
 $config['smtp_port'] = "587";
-$config['smtp_user'] = "naoresponda@clipdata.com.br";
-$config['smtp_pass'] = "JncUz8QyTQ";
+$config['smtp_user'] = "";
+$config['smtp_pass'] = "";
 
 $config['sms_url'] 	 	= FALSE;
 $config['sms_user']		= "25"; //codigo
-$config['sms_pass'] 	= "ca73ab65568cd125c2d27a22bbd9e863c10b675d"; //token
+$config['sms_pass'] 	= ""; //token
 
 /* End of file config.php */
 /* Location: ./application/config/my_config.php */
